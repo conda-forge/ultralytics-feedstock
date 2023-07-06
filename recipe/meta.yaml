@@ -77,7 +77,7 @@ about:
     conda install ultralytics
     ```
     
-    For alternative installation methods including Conda, Docker, and Git, please refer to the [Quickstart Guide](https://docs.ultralytics.com/quickstart).
+    For alternative installation methods including Pip, Docker, and Git, please refer to the [Quickstart Guide](https://docs.ultralytics.com/quickstart).
     
     </details>
     
