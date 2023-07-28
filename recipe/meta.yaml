@@ -15,7 +15,7 @@ build:
     - ultralytics = ultralytics.yolo.cfg:entrypoint
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
