@@ -19,10 +19,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
+    - python >=3.8
     - matplotlib-base >=3.2.2
     - numpy >=1.22.2
     - opencv >=4.6.0
