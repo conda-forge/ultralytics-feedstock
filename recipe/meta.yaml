@@ -11,8 +11,8 @@ source:
 
 build:
   entry_points:
-    - yolo = ultralytics.yolo.cfg:entrypoint
-    - ultralytics = ultralytics.yolo.cfg:entrypoint
+    - yolo = ultralytics.cfg:entrypoint
+    - ultralytics = ultralytics.cfg:entrypoint
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
