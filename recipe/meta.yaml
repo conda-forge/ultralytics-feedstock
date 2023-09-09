@@ -39,6 +39,8 @@ requirements:
     - py-cpuinfo
 
 test:
+  source_files:
+    - tests
   imports:
     - ultralytics
   commands:
