@@ -45,7 +45,7 @@ test:
     - pip check
     - yolo --help
     - ultralytics --help
-    - pytest ultralytics/tests
+    - pytest tests
   requires:
     - pip
     - pytest
