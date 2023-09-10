@@ -50,6 +50,7 @@ test:
     - pytest tests
   requires:
     - pip
+    - git
     - pytest
 
 about:
