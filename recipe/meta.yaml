@@ -14,7 +14,7 @@ build:
     - yolo = ultralytics.cfg:entrypoint
     - ultralytics = ultralytics.cfg:entrypoint
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install .
   number: 0
 
 requirements:
@@ -30,8 +30,8 @@ requirements:
     - pyyaml >=5.3.1
     - requests >=2.23.0
     - scipy >=1.4.1
-    - pytorch >=1.7.0
-    - torchvision >=0.8.1
+    # - pytorch >=1.7.0
+    # - torchvision >=0.8.1
     - tqdm >=4.64.0
     - pandas >=1.1.4
     - seaborn >=0.11.0
@@ -39,14 +39,21 @@ requirements:
     - py-cpuinfo
 
 test:
+  source_files:
+    - tests
   imports:
     - ultralytics
   commands:
     - pip check
-    - yolo --help
-    - ultralytics --help
+    - yolo checks
+    - ultralytics version
+    - pytest tests/test_engine.py
   requires:
     - pip
+    - git
+    - pytest
+    - pytorch
+    - torchvision
 
 about:
   home: https://ultralytics.com
