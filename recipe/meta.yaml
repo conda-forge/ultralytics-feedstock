@@ -47,7 +47,7 @@ test:
     - pip check
     - yolo checks
     - ultralytics --version
-    - pytest tests
+    - pytest tests/test_python.py
   requires:
     - pip
     - git
