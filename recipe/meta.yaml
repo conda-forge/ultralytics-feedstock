@@ -39,14 +39,19 @@ requirements:
     - py-cpuinfo
 
 test:
+  source_files:
+    - tests
   imports:
     - ultralytics
   commands:
     - pip check
     - yolo --help
     - ultralytics --help
+    - pytest tests
   requires:
     - pip
+    - git
+    - pytest
 
 about:
   home: https://ultralytics.com
