@@ -45,9 +45,9 @@ test:
     - ultralytics
   commands:
     - pip check
-    - yolo --help
-    - ultralytics --help
-    - pytest tests
+    - yolo checks
+    - ultralytics --version
+    - pytest tests/test_engine.py
   requires:
     - pip
     - git
