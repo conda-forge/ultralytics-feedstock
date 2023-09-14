@@ -32,11 +32,11 @@ requirements:
     - scipy >=1.4.1
     # - pytorch >=1.7.0
     # - torchvision >=0.8.1
-    - tqdm >=4.64.0
-    - pandas >=1.1.4
-    - seaborn >=0.11.0
-    - psutil
-    - py-cpuinfo
+    #- tqdm >=4.64.0
+    #- pandas >=1.1.4
+    #- seaborn >=0.11.0
+    #- psutil
+    #- py-cpuinfo
 
 test:
   source_files:
@@ -47,7 +47,7 @@ test:
     - pip check
     - yolo checks
     - ultralytics --version
-    - pytest tests/test_engine.py
+    - pytest tests/test_cli.py
   requires:
     - pip
     - git
