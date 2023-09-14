@@ -47,11 +47,11 @@ test:
     - pip check
     - yolo checks
     - ultralytics version
-    - pip install pytest
-    - pytest tests
+    - pytest tests/test_python.py
   requires:
     - pip
     - git
+    - pytest
     - pytorch
     - torchvision
 
