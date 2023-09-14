@@ -14,7 +14,7 @@ build:
     - yolo = ultralytics.cfg:entrypoint
     - ultralytics = ultralytics.cfg:entrypoint
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -v
   number: 0
 
 requirements:
@@ -46,7 +46,7 @@ test:
   commands:
     - pip check
     - yolo checks
-    - ultralytics --version
+    - ultralytics version
     - pytest tests/test_python.py
   requires:
     - pip
