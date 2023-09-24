@@ -55,6 +55,7 @@ test:
     - pytest
     - pytorch
     - torchvision
+    - coremltools >=7.0.b1
 
 about:
   home: https://ultralytics.com
