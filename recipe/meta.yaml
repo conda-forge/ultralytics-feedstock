@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - matplotlib-base >=3.2.2
+    - matplotlib-base >=3.3.0
     - numpy >=1.22.2
     - opencv >=4.6.0
     - pillow >=7.1.2
