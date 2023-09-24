@@ -44,10 +44,11 @@ test:
   imports:
     - ultralytics
   commands:
+    - pip install 'coremltools>=7.0'
     - pip check
     - yolo checks
     - ultralytics version
-    - pytest tests/test_cli.py tests/test_cuda.py tests/test_engine.py
+    - pytest tests/test_cli.py tests/test_cuda.py tests/test_engine.py tests/test_python.py
   requires:
     - pip
     - git
