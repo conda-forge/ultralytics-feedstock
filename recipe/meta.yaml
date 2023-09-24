@@ -41,7 +41,6 @@ requirements:
 test:
   source_files:
     - tests
-    - setup.cfg
   imports:
     - ultralytics
   commands:
