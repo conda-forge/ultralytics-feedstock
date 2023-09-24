@@ -40,7 +40,7 @@ requirements:
 
 test:
   source_files:
-    - tests
+    - tests/*.py
   imports:
     - ultralytics
   commands:
@@ -48,9 +48,9 @@ test:
     - pip check
     - yolo checks
     - ultralytics version
-    - cd tests
     - ls
-    - pytest
+    - ls tests
+    - pytest tests
   requires:
     - pip
     - git
