@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - matplotlib-base >=3.2.2
+    - matplotlib-base >=3.3.0
     - numpy >=1.22.2
     - opencv >=4.6.0
     - pillow >=7.1.2
@@ -48,7 +48,9 @@ test:
     - pip check
     - yolo checks
     - ultralytics version
-    - pytest tests/test_cli.py tests/test_cuda.py tests/test_engine.py tests/test_python.py
+    - ls
+    - ls tests
+    - pytest tests
   requires:
     - pip
     - git
