@@ -44,6 +44,7 @@ test:
   imports:
     - ultralytics
   commands:
+    - pip install 'coremltools>=7.0'
     - pip check
     - yolo checks
     - ultralytics version
@@ -54,7 +55,6 @@ test:
     - pytest
     - pytorch
     - torchvision
-    - coremltools >=7.0.0
 
 about:
   home: https://ultralytics.com
