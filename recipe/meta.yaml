@@ -48,7 +48,6 @@ test:
     - pip check
     - yolo checks
     - ultralytics version
-    - ls
     - ls tests
     - pytest tests
   requires:
