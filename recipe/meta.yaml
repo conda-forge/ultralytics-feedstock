@@ -37,6 +37,7 @@ requirements:
     - seaborn >=0.11.0
     - psutil
     - py-cpuinfo
+    - thop >=1.1.0
 
 test:
   source_files:
