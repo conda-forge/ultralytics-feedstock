@@ -37,7 +37,7 @@ requirements:
     - seaborn >=0.11.0
     - psutil
     - py-cpuinfo
-    - thop
+    # - thop >=0.1.1  (not available in Conda)
 
 test:
   source_files:
