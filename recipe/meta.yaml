@@ -45,7 +45,7 @@ test:
   imports:
     - ultralytics
   commands:
-    - pip install 'coremltools>=7.0'
+    - pip install thop 'coremltools>=7.0'
     - pip check
     - yolo checks
     - ultralytics version
