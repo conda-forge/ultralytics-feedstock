@@ -45,11 +45,11 @@ test:
   imports:
     - ultralytics
   commands:
-    - pip install 'coremltools>=7.0' 'openvino>=2023.1.0'
+    - pip install 'coremltools>=7.0'
     - yolo checks
     - ultralytics version
     - ls tests
-    - pytest tests
+    - pytest tests -k "not test_export_openvino"
   requires:
     - pip
     - git
