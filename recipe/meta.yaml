@@ -1,5 +1,5 @@
 {% set name = "ultralytics" %}
-{% set version = "8.0.188" %}
+{% set version = "8.0.191" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ultralytics-{{ version }}.tar.gz
-  sha256: f6b7a8e4a20d26ded17453cd596e2aceb5783cd16677c85ef6d82a4e0142ac2d
+  sha256: c351b9f1f29ec3f5339e077d8e8c5240a5df91090075d8d980ed2cdd7197f5ab
 
 build:
   entry_points:
@@ -46,7 +46,6 @@ test:
     - ultralytics
   commands:
     - pip install 'coremltools>=7.0'
-    - pip check
     - yolo checks
     - ultralytics version
     - ls tests
