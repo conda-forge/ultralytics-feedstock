@@ -45,7 +45,8 @@ test:
   imports:
     - ultralytics
   commands:
-    - pip install 'coremltools>=7.0' thop
+    # coremltools>=7.0 requires pip install as latest conda version is 4.1
+    - pip install coremltools thop
     - pip check
     - yolo checks
     - ultralytics version
