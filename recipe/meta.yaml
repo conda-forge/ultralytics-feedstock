@@ -45,17 +45,19 @@ test:
   imports:
     - ultralytics
   commands:
-    - pip install 'coremltools>=7.0'
+    - pip install 'coremltools>=7.0' thop
+    - pip checks
     - yolo checks
     - ultralytics version
     - ls tests
-    - pytest tests -k "not test_export_openvino"
+    - pytest tests
   requires:
     - pip
     - git
     - pytest
     - pytorch
     - torchvision
+    - openvino
 
 about:
   home: https://ultralytics.com
