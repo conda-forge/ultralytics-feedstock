@@ -37,7 +37,7 @@ requirements:
     - seaborn >=0.11.0
     - psutil
     - py-cpuinfo
-    # - thop >=0.1.1  (not available in Conda, do not uncomment)
+    # - thop >=0.1.1  (not available in Conda, pip installed below for tests)
 
 test:
   source_files:
@@ -45,14 +45,15 @@ test:
   imports:
     - ultralytics
   commands:
-    # - pip install 'coremltools>=7.0'
+    - pip install thop
+    - pip check
     - yolo checks
     - ultralytics version
     - ls tests
     - pytest tests
   requires:
     - pip
-    - git
+    # - git
     - pytest
     - pytorch
     - torchvision
