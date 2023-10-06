@@ -164,4 +164,5 @@ Feedstock Maintainers
 * [@Laughing-q](https://github.com/Laughing-q/)
 * [@abraha2d](https://github.com/abraha2d/)
 * [@glenn-jocher](https://github.com/glenn-jocher/)
+* [@ilya-lavrenov](https://github.com/ilya-lavrenov/)
 
