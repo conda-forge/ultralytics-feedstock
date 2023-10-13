@@ -45,8 +45,9 @@ test:
   imports:
     - ultralytics
   commands:
-    # - pip install thop
-    # - pip check
+    # coremltools>=7.0 requires pip install as latest conda coremltools==4.1
+    - pip install coremltools thop
+    - pip check
     - yolo checks
     - ultralytics version
     - ls tests
@@ -58,7 +59,6 @@ test:
     - pytorch
     - torchvision
     - openvino
-    - coremltools
 
 about:
   home: https://ultralytics.com
