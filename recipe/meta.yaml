@@ -1,5 +1,5 @@
 {% set name = "ultralytics" %}
-{% set version = "8.0.215" %}
+{% set version = "8.0.216" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ultralytics-{{ version }}.tar.gz
-  sha256: def27064eae1d0c8f17a1aede24d8d038a543feffe9f1dd1f140eaa1c455ae50
+  sha256: ce6b542fcf0250b605c90d4dcba7c6d2d7a23b9ff9e372c4de80cc7303d762e7
 
 build:
   entry_points:
