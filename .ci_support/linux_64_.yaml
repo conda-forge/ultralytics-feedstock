@@ -7,4 +7,4 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 pytorch:
-- '2.0'
+- '2.1'
