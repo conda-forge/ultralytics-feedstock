@@ -48,7 +48,7 @@ test:
     # coremltools>=7.0 requires pip install as latest conda coremltools==4.1
     # 'imp' package required by coremltools
     - pip install imp
-    - pip install coremltools thop hub_sdk
+    - pip install coremltools thop hub-sdk
     - pip check
     - yolo checks
     - ultralytics version
