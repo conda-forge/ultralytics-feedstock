@@ -21,6 +21,7 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - ocl-icd-system
   run:
     - python >=3.8
     - matplotlib-base >=3.3.0
