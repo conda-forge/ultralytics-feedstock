@@ -20,8 +20,9 @@ build:
 requirements:
   host:
     - python >=3.8
-    - pip
-    - ocl-icd-system
+    - pip >=24.0
+    - setuptools >=69.2.0
+    - wheel >=0.43.0
   run:
     - python >=3.8
     - matplotlib-base >=3.3.0
