@@ -51,7 +51,7 @@ test:
     - yolo checks
     - ultralytics version
     - ls tests
-    - pytest tests/test_engine.py
+    - pytest tests
   requires:
     - pip
     - git
