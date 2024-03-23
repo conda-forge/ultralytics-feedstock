@@ -3,3 +3,6 @@ mesa-libEGL
 libglvnd-egl
 libglvnd-glx
 libglvnd-opengl
+
+# For installing pycocotools
+gcc
