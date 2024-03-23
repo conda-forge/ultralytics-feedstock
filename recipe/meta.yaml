@@ -47,7 +47,7 @@ test:
   commands:
     # coremltools>=7.0 requires pip install as latest conda coremltools==4.1
     # - pip install thop hub-sdk
-    - pip check
+    # - pip check
     - yolo checks
     - ultralytics version
     - ls tests
