@@ -14,7 +14,7 @@ build:
     - yolo = ultralytics.cfg:entrypoint
     - ultralytics = ultralytics.cfg:entrypoint
   noarch: python
-  script: {{ PYTHON }} -m pip install . && apt-get update && apt-get install -y libgl1 libegl1-mesa libopengl0
+  script: {{ PYTHON }} -m pip install .
   number: 0
 
 requirements:
@@ -42,11 +42,9 @@ requirements:
 test:
   source_files:
     - tests
-  imports:
-    - ultralytics
   commands:
     # Fix cv2 ImportError: 'libEGL.so.1: cannot open shared object file: No such file or directory'
-    # - sudo apt-get update && sudo apt-get install -y libgl1 libegl1-mesa libopengl0
+    - sudo apt-get update && sudo apt-get install -y libgl1 libegl1-mesa libopengl0
     # coremltools>=7.0 requires pip install as latest conda coremltools==4.1
     - pip install coremltools thop hub-sdk
     - pip check
@@ -54,6 +52,9 @@ test:
     - ultralytics version
     - ls tests
     - pytest tests
+  # Imports AFTER commands so apt-get runs first
+  imports:
+    - ultralytics
   requires:
     - pip
     - git
