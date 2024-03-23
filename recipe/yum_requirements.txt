@@ -3,5 +3,3 @@ mesa-libEGL
 libglvnd-egl
 libglvnd-glx
 libglvnd-opengl
-gcc
-cmake
