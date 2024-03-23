@@ -21,8 +21,6 @@ requirements:
   host:
     - python >=3.8
     - pip
-    - cmake
-    - gcc
   run:
     - python >=3.8
     - matplotlib-base >=3.3.0
@@ -40,6 +38,8 @@ requirements:
     - psutil
     - py-cpuinfo
     # - thop >=0.1.1  (not available in Conda)
+    - cmake
+    - gcc
 
 test:
   source_files:
