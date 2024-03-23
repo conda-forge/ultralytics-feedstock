@@ -47,7 +47,7 @@ test:
   #  - ultralytics
   commands:
     # Fix cv2 ImportError: 'libEGL.so.1: cannot open shared object file: No such file or directory'
-    - sudo apt-get update && sudo apt-get install -y libegl1 libopengl0
+    # - sudo apt-get update && sudo apt-get install -y libegl1 libopengl0
     # Install coremltools from source to fix coremltools<=7.1 bug: ModuleNotFoundError: No module named 'imp'
     # Note coremltools>=7.0 requires pip install as latest conda coremltools==4.1
     - pip install git+https://github.com/apple/coremltools@main thop hub-sdk
@@ -63,6 +63,7 @@ test:
     - pytorch
     - torchvision
     - openvino
+    - libopencv *=headless*
 
 about:
   home: https://ultralytics.com
