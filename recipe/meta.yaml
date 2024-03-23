@@ -14,7 +14,7 @@ build:
     - yolo = ultralytics.cfg:entrypoint
     - ultralytics = ultralytics.cfg:entrypoint
   noarch: python
-  script: {{ PYTHON }} -m pip install . && sudo apt-get update && sudo apt-get install -y libgl1 libegl1-mesa libopengl0
+  script: {{ PYTHON }} -m pip install . && apt-get update && apt-get install -y libgl1 libegl1-mesa libopengl0
   number: 0
 
 requirements:
