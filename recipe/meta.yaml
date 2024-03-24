@@ -38,20 +38,25 @@ requirements:
     - psutil
     - py-cpuinfo
     # - thop >=0.1.1  (not available in Conda)
-
+    # Experiment to fix failed compilations for pip wheels
+    # - {{ compiler('c') }}
+    # - {{ compiler('cxx') }}
+    - cmake
+    - gcc
+    
 test:
   source_files:
     - tests
   imports:
     - ultralytics
   commands:
-    # coremltools>=7.0 requires pip install as latest conda coremltools==4.1
-    # - pip install thop hub-sdk
-    # - pip check
+    # Install coremltools from source to fix coremltools<=7.1 bug: ModuleNotFoundError: No module named 'imp'
+    - pip install git+https://github.com/apple/coremltools@main thop hub-sdk
+    - pip check
     - yolo checks
     - ultralytics version
     - ls tests
-    - pytest tests/test_engine.py
+    - pytest tests
   requires:
     - pip
     - git
@@ -59,9 +64,6 @@ test:
     - pytorch
     - torchvision
     - openvino
-    # - coremltools
-    # - thop
-    # - hub-sdk
 
 about:
   home: https://ultralytics.com
