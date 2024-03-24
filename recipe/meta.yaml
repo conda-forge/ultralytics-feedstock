@@ -40,6 +40,7 @@ requirements:
     # - thop >=0.1.1  (not available in Conda)
     - cmake
     - gcc
+    - g++
 
 test:
   source_files:
