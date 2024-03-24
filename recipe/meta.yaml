@@ -21,6 +21,8 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   run:
     - python >=3.8
     - matplotlib-base >=3.3.0
@@ -49,7 +51,6 @@ test:
     - ultralytics
   commands:
     # Install coremltools from source to fix coremltools<=7.1 bug: ModuleNotFoundError: No module named 'imp'
-    - apt-get update && apt-get install gcc g++ cmake
     - pip install git+https://github.com/apple/coremltools@main thop hub-sdk
     - pip check
     - yolo checks
