@@ -38,9 +38,9 @@ requirements:
     - psutil
     - py-cpuinfo
     # - thop >=0.1.1  (not available in Conda)
-    - cmake
-    - gcc
-    - gcc_linux-64
+    # EXPERIMENT
+    # - cmake
+    # - gcc
     
 test:
   source_files:
@@ -49,6 +49,7 @@ test:
     - ultralytics
   commands:
     # Install coremltools from source to fix coremltools<=7.1 bug: ModuleNotFoundError: No module named 'imp'
+    - sudo apt-get update && sudo apt-get install gcc g++ cmake
     - pip install git+https://github.com/apple/coremltools@main thop hub-sdk
     - pip check
     - yolo checks
