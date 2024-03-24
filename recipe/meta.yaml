@@ -21,8 +21,6 @@ requirements:
   host:
     - python >=3.8
     - pip
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
   run:
     - python >=3.8
     - matplotlib-base >=3.3.0
@@ -40,9 +38,11 @@ requirements:
     - psutil
     - py-cpuinfo
     # - thop >=0.1.1  (not available in Conda)
-    # EXPERIMENT
-    # - cmake
-    # - gcc
+    # Experiment to fix failed compilations for pip wheels
+    # - {{ compiler('c') }}
+    # - {{ compiler('cxx') }}
+    - cmake
+    - gcc
     
 test:
   source_files:
