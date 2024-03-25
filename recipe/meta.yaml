@@ -38,6 +38,7 @@ requirements:
     - psutil
     - py-cpuinfo
     # - thop >=0.1.1  (not available in Conda)
+    
     # Experiment to fix failed compilations for pip wheels
     # - {{ compiler('c') }}
     # - {{ compiler('cxx') }}
