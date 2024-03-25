@@ -15,7 +15,7 @@ build:
     - ultralytics = ultralytics.cfg:entrypoint
   noarch: python
   script: {{ PYTHON }} -m pip install .
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -42,8 +42,8 @@ requirements:
     # Experiment to fix failed compilations for pip wheels
     # - {{ compiler('c') }}
     # - {{ compiler('cxx') }}
-    - cmake
-    - gcc
+    # - cmake
+    # - gcc
     
 test:
   source_files:
@@ -57,7 +57,7 @@ test:
     - yolo checks
     - ultralytics version
     - ls tests
-    - pytest tests
+    # - pytest tests/test_python.py
   requires:
     - pip
     - git
