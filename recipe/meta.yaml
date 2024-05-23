@@ -41,7 +41,7 @@ requirements:
 
 test:
   source_files:
-    - tests
+    - tests/*.py
   imports:
     - ultralytics
   commands:
