@@ -51,6 +51,7 @@ test:
     - yolo checks
     - ultralytics version
     - ls tests
+    # WARNING: run pytest from python to resolve bug https://github.com/conda-forge/ultralytics-feedstock/pull/199
     - python -m pytest tests/test_engine.py
   requires:
     - pip
