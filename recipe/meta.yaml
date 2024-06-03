@@ -37,7 +37,7 @@ requirements:
     - seaborn >=0.11.0
     - psutil
     - py-cpuinfo
-    # - thop >=0.1.1  (not available in Conda)
+    # - ultralytics-thop >=0.2.6  (not available in Conda)
 
 test:
   source_files:
@@ -51,8 +51,8 @@ test:
     - yolo checks
     - ultralytics version
     - ls tests
-    - pytest tests/test_engine.py
-    # - pytest tests/
+    # - pytest tests/test_engine.py
+    - pytest tests/
   requires:
     - pip
     - git
@@ -61,7 +61,7 @@ test:
     - torchvision
     - openvino
     # - coremltools
-    # - thop
+    # - ultralytics-thop
     # - hub-sdk
 
 about:
