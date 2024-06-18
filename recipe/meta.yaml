@@ -37,7 +37,6 @@ requirements:
     - seaborn >=0.11.0
     - psutil
     - py-cpuinfo
-    # - thop >=0.1.1  (not available in Conda)
 
 test:
   source_files:
@@ -46,8 +45,9 @@ test:
     - ultralytics
   commands:
     # coremltools>=7.0 requires pip install as latest conda coremltools==4.1
-    # - pip install thop hub-sdk
-    # - pip check
+    # ultralytics-thop requires pip install as not available in conda
+    - pip install ultralytics-thop>=2.0.0
+    - pip check
     - yolo checks
     - ultralytics version
     - ls tests
