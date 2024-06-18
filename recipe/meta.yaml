@@ -1,5 +1,5 @@
 {% set name = "ultralytics" %}
-{% set version = "8.2.34" %}
+{% set version = "8.2.35" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ultralytics-{{ version }}.tar.gz
-  sha256: a3d9ff6f04781760a3f27c2b3e9baa0fabd6bd53d218e1a6440281818bfaae27
+  sha256: 01a2d2d0fa11317baa55088a75b27089a7883d8c444ab2c470392c08375e49e1
 
 build:
   entry_points:
@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.8
     - matplotlib-base >=3.3.0
-    - numpy >=1.22.2
+    - numpy >=1.22.2, <2.0.0
     - opencv >=4.6.0
     - pillow >=7.1.2
     - pyyaml >=5.3.1
@@ -37,7 +37,6 @@ requirements:
     - seaborn >=0.11.0
     - psutil
     - py-cpuinfo
-    # - thop >=0.1.1  (not available in Conda)
 
 test:
   source_files:
@@ -46,8 +45,9 @@ test:
     - ultralytics
   commands:
     # coremltools>=7.0 requires pip install as latest conda coremltools==4.1
-    # - pip install thop hub-sdk
-    # - pip check
+    # ultralytics-thop requires pip install as not available in conda
+    - pip install ultralytics-thop>=2.0.0
+    - pip check
     - yolo checks
     - ultralytics version
     - ls tests
