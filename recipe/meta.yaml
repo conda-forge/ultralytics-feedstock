@@ -47,6 +47,7 @@ test:
     # coremltools>=7.0 requires pip install as latest conda coremltools==4.1
     # ultralytics-thop requires pip install as not available in conda
     - pip install ultralytics-thop>=2.0.0
+    - pip install onnxruntime
     - pip check
     - yolo checks
     - ultralytics version
