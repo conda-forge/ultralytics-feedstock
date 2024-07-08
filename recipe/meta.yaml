@@ -65,6 +65,7 @@ test:
     # - thop
     # - hub-sdk
 
+
 about:
   home: https://ultralytics.com
   summary: Ultralytics YOLO for SOTA object detection, multi-object tracking, instance segmentation, pose estimation and image classification.
