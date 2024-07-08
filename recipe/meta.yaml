@@ -51,8 +51,8 @@ test:
     - yolo checks
     - ultralytics version
     - ls tests
-    - pytest tests/test_engine.py
-    # - pytest tests/
+    # - pytest tests/test_engine.py
+    - pytest tests/
   requires:
     - pip
     - git
@@ -60,9 +60,11 @@ test:
     - pytorch
     - torchvision
     - openvino
+    - onnxruntime
     # - coremltools
     # - thop
     # - hub-sdk
+
 
 about:
   home: https://ultralytics.com
