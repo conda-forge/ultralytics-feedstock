@@ -14,6 +14,7 @@ from argparse import ArgumentParser
 
 
 def setup_environment(ns):
+    """Set environment variables for the build process based on the provided namespace configuration."""
     os.environ["CONFIG"] = ns.config
     os.environ["UPLOAD_PACKAGES"] = "False"
     os.environ["IS_PR_BUILD"] = "True"
@@ -28,26 +29,29 @@ def setup_environment(ns):
 
 
 def run_docker_build(ns):
+    """Runs the Docker build process using a specified shell script for environment setup."""
     script = ".scripts/run_docker_build.sh"
     subprocess.check_call([script])
 
 
 def run_osx_build(ns):
+    """Executes the macOS build script for the Ultralytics package using specified namespace arguments."""
     script = ".scripts/run_osx_build.sh"
     subprocess.check_call([script])
 
 
 def verify_config(ns):
+    """Verify and select a valid configuration from available YAML files in the '.ci_support' directory."""
     valid_configs = {
         os.path.basename(f)[:-5] for f in glob.glob(".ci_support/*.yaml")
     }
     print(f"valid configs are {valid_configs}")
     if ns.config in valid_configs:
-        print("Using " + ns.config + " configuration")
+        print(f"Using {ns.config} configuration")
         return
     elif len(valid_configs) == 1:
         ns.config = valid_configs.pop()
-        print("Found " + ns.config + " configuration")
+        print(f"Found {ns.config} configuration")
     elif ns.config is None:
         print("config not selected, please choose from the following:\n")
         selections = list(enumerate(sorted(valid_configs), 1))
@@ -58,7 +62,7 @@ def verify_config(ns):
         ns.config = selections[idx][1]
         print(f"selected {ns.config}")
     else:
-        raise ValueError("config " + ns.config + " is not valid")
+        raise ValueError(f"config {ns.config} is not valid")
     # Remove the following, as implemented
     if ns.config.startswith("win"):
         raise ValueError(
@@ -75,6 +79,7 @@ def verify_config(ns):
 
 
 def main(args=None):
+    """Build and execute the local environment setup for Linux/macOS configurations using specified arguments."""
     p = ArgumentParser("build-locally")
     p.add_argument("config", default=None, nargs="?")
     p.add_argument(
