@@ -55,10 +55,9 @@ ulimit -n 1024
 # run "conda smithy rerender" and this line will be updated
 # automatically.
 /usr/bin/sudo -n yum install -y mesa-libGL mesa-libEGL libglvnd-egl libglvnd-glx libglvnd-opengl
+)
 
-
-
-)# make the build number clobber
+# make the build number clobber
 make_build_number "${FEEDSTOCK_ROOT}" "${RECIPE_ROOT}" "${CONFIG_FILE}"
 
 
