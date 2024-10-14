@@ -21,6 +21,8 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools >=70.0.0
+    - wheel
   run:
     - python >=3.8
     - matplotlib-base >=3.3.0
