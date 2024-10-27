@@ -162,9 +162,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@AyushExel](https://github.com/AyushExel/)
-* [@Laughing-q](https://github.com/Laughing-q/)
-* [@abraha2d](https://github.com/abraha2d/)
 * [@glenn-jocher](https://github.com/glenn-jocher/)
-* [@ilya-lavrenov](https://github.com/ilya-lavrenov/)
-
+* [@Laughing-q](https://github.com/Laughing-q/)
+* [@pderrenger](https://github.com/pderrenger/)
+* [@UltralyticsAssistant](https://github.com/UltralyticsAssistant/)
