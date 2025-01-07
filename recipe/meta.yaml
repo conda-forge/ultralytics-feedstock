@@ -14,17 +14,17 @@ build:
     - yolo = ultralytics.cfg:entrypoint
     - ultralytics = ultralytics.cfg:entrypoint
   noarch: python
-  script: {{ PYTHON }} -m pip install .
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools >=70.0.0
     - wheel
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - matplotlib-base >=3.3.0
     - numpy >=1.22.2, <2.0.0
     - opencv >=4.6.0
@@ -65,6 +65,7 @@ test:
     # - coremltools
     # - thop
     # - hub-sdk
+    - python {{ python_min }}
 
 about:
   home: https://ultralytics.com
