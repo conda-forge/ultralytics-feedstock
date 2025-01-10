@@ -1,5 +1,5 @@
 {% set name = "ultralytics" %}
-{% set version = "8.3.58" %}
+{% set version = "8.3.59" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ultralytics-{{ version }}.tar.gz
-  sha256: 2d0ca4e5e7612365dc74c4c75e23ef0aecd677887dd7d272dbb77bd93e6ef087
+  sha256: 607ac7181835575d557f86aa84e593927c02c9d43c784d9422a28e7b165ea5d4
 
 build:
   entry_points:
@@ -15,7 +15,7 @@ build:
     - ultralytics = ultralytics.cfg:entrypoint
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
