@@ -14,7 +14,7 @@ build:
     - yolo = ultralytics.cfg:entrypoint
     - ultralytics = ultralytics.cfg:entrypoint
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation "ultralytics-thop>=2.0.0"
   number: 0
 
 requirements:
@@ -43,19 +43,19 @@ requirements:
 test:
   source_files:
     - tests
+  imports:
+    # imports must be after commands so that ultralytics-thop installs first
+    - ultralytics
   commands:
     # coremltools>=7.0 requires pip install as latest conda coremltools==4.1
     # ultralytics-thop requires pip install as not available in conda
-    - pip install ultralytics-thop>=2.0.0
+    #- pip install ultralytics-thop>=2.0.0
     - pip check
     - yolo checks
     - ultralytics version
     - ls tests
     - pytest tests/test_engine.py
     # - pytest tests/
-  imports:
-    # imports must be after commands so that ultralytics-thop installs first
-    - ultralytics
   requires:
     - pip
     - git
