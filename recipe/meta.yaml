@@ -43,8 +43,6 @@ requirements:
 test:
   source_files:
     - tests
-  imports:
-    - ultralytics
   commands:
     # coremltools>=7.0 requires pip install as latest conda coremltools==4.1
     # ultralytics-thop requires pip install as not available in conda
@@ -55,6 +53,9 @@ test:
     - ls tests
     - pytest tests/test_engine.py
     # - pytest tests/
+  imports:
+    # imports must be after commands so that ultralytics-thop installs first
+    - ultralytics
   requires:
     - pip
     - git
