@@ -14,7 +14,9 @@ build:
     - yolo = ultralytics.cfg:entrypoint
     - ultralytics = ultralytics.cfg:entrypoint
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation ultralytics-thop>=2.0.0 --index-url https://pypi.org/simple/
+  script: |
+    {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    {{ PYTHON }} -m pip install "ultralytics-thop>=2.0.0" --index-url https://pypi.org/simple/
   number: 0
 
 requirements:
