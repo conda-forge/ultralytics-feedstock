@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ultralytics-fee
 
 Home: https://ultralytics.com
 
-Package license: AGPL-3.0-only
+Package license: [AGPL-3.0](https://www.ultralytics.com/license)
 
 Summary: Ultralytics YOLO for SOTA object detection, multi-object tracking, instance segmentation, pose estimation and image classification.
 
@@ -162,9 +162,8 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@AyushExel](https://github.com/AyushExel/)
+* [@glenn-jocher](https://github.com/glenn-jocher/)
 * [@Laughing-q](https://github.com/Laughing-q/)
 * [@abraha2d](https://github.com/abraha2d/)
-* [@glenn-jocher](https://github.com/glenn-jocher/)
 * [@ilya-lavrenov](https://github.com/ilya-lavrenov/)
 
