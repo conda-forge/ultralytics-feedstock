@@ -3,7 +3,7 @@
 # This action checks the status of recent PRs in the current repository.
 # It runs daily and can be triggered manually, notifying via Slack if any checks fail.
 
-name: Check PR Status
+name: Conda PR Status
 
 on:
   schedule:
