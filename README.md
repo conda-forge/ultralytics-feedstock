@@ -1,6 +1,8 @@
 About ultralytics-feedstock
 ===========================
 
+[![Conda PR Status](https://github.com/conda-forge/ultralytics-feedstock/actions/workflows/check-prs.yml/badge.svg)](https://github.com/conda-forge/ultralytics-feedstock/actions/workflows/check-prs.yml)
+
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ultralytics-feedstock/blob/main/LICENSE.txt)
 
 Home: https://ultralytics.com
@@ -26,7 +28,6 @@ To request an Enterprise License please complete the form at [Ultralytics Licens
 ![Ultralytics YOLO performance comparison](https://raw.githubusercontent.com/ultralytics/assets/refs/heads/main/yolo/performance-comparison.png)
 
 YOLO [Detect](https://docs.ultralytics.com/tasks/detect), [Segment](https://docs.ultralytics.com/tasks/segment) and [Pose](https://docs.ultralytics.com/tasks/pose) models pretrained on the [COCO](https://docs.ultralytics.com/datasets/detect/coco) dataset are available, as well as YOLO [Classify](https://docs.ultralytics.com/tasks/classify) models pretrained on the [ImageNet](https://docs.ultralytics.com/datasets/classify/imagenet) dataset. [Track](https://docs.ultralytics.com/modes/track) mode is available for all Detect, Segment and Pose models. All [Models](https://github.com/ultralytics/ultralytics/tree/main/ultralytics/models) download automatically from the latest Ultralytics [release](https://github.com/ultralytics/assets/releases) on first use.
-
 
 Current build status
 ====================
