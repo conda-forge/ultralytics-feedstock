@@ -1,7 +1,7 @@
 # Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
 
 # This action checks the status of recent PRs in the current repository.
-# It runs daily and can be triggered manually, notifying via Slack if any checks fail.
+# It runs daily and can be triggered manually, updating a status badge for the Ultralytics Docs.
 
 name: Conda Builds
 
