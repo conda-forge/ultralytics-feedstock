@@ -74,40 +74,5 @@ jobs:
                   print(f"Failed checks: {', '.join(pr['failed_checks'])}")
           else:
               print("No PR check failures found")
-      
-      - name: Notify Slack on failures
-        if: steps.check-prs.outputs.has_failures == 'true'
-        uses: slackapi/slack-github-action@v2.0.0
-        with:
-          webhook-type: incoming-webhook
-          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
-          payload: |
-            {
-              "blocks": [
-                {
-                  "type": "header",
-                  "text": {
-                    "type": "plain_text",
-                    "text": "⚠️ PR Check Failures Detected",
-                    "emoji": true
-                  }
-                },
-                {
-                  "type": "divider"
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "*Repository:* ${{ github.repository }}"
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn", 
-                    "text": "${{ format('{0}', fromJson(steps.check-prs.outputs.failed_prs).map(pr => `*PR #${pr.number}:* <${pr.url}|${pr.title}>\n*Author:* ${pr.author}\n*Failed Checks:* ${pr.failed_checks.join(', ')}`).join('\n\n')) }}"
-                  }
-                }
-              ]
-            }
+
+          assert not has_failures, "Repository has PRs with test failures"
