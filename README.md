@@ -1,7 +1,7 @@
 About ultralytics-feedstock
 ===========================
 
-[![Conda PR Status](https://github.com/conda-forge/ultralytics-feedstock/actions/workflows/check-prs.yml/badge.svg)](https://github.com/conda-forge/ultralytics-feedstock/actions/workflows/check-prs.yml)
+[![Conda Builds](https://github.com/conda-forge/ultralytics-feedstock/actions/workflows/check-prs.yml/badge.svg)](https://github.com/conda-forge/ultralytics-feedstock/actions/workflows/check-prs.yml)
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ultralytics-feedstock/blob/main/LICENSE.txt)
 
