@@ -26,7 +26,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - matplotlib-base >=3.3.0
-    - numpy >=1.22.2, <2.0.0
+    - numpy >=1.22.2
     - opencv >=4.6.0
     - pillow >=7.1.2
     - pyyaml >=5.3.1
