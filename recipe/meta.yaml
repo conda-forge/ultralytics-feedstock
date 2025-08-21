@@ -61,7 +61,7 @@ test:
     - pytest
     - pytorch
     - torchvision
-    - openvino
+    # - openvino  # note compatibility issue with numpy>2.0
     # - coremltools
     # - thop
     # - hub-sdk
