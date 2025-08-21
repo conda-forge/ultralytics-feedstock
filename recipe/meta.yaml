@@ -1,5 +1,5 @@
 {% set name = "ultralytics" %}
-{% set version = "8.3.181" %}
+{% set version = "8.3.182" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ultralytics-{{ version }}.tar.gz
-  sha256: 6021b90536c403ac2f48d0b162dfa901d42657b986d90cd6c70c4f80b22a84c0
+  sha256: 71e5ac25b57218de0f6125790c70f99d84e6ceacd59267261326491e53878dc8
 
 build:
   entry_points:
@@ -61,7 +61,7 @@ test:
     - pytest
     - pytorch
     - torchvision
-    - openvino
+    # - openvino  # note compatibility issue with numpy>2.0
     # - coremltools
     # - thop
     # - hub-sdk
