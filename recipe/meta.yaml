@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ultralytics-{{ version }}.tar.gz
-  sha256: dbae2dbc3a52ed5868956892e72abbd0c59335fa5fd61717ba18d3533bcf265b
+  sha256: 55ee0c8078bcc1fe22e818631857ee13f63d804025dfeff582a9de567d1e02dc
 
 build:
   entry_points:
