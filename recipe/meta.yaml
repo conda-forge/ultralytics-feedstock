@@ -1,5 +1,5 @@
 {% set name = "ultralytics" %}
-{% set version = "8.3.186" %}
+{% set version = "8.3.188" %}
 
 package:
   name: {{ name|lower }}
