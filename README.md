@@ -165,5 +165,6 @@ Feedstock Maintainers
 * [@Laughing-q](https://github.com/Laughing-q/)
 * [@UltralyticsAssistant](https://github.com/UltralyticsAssistant/)
 * [@glenn-jocher](https://github.com/glenn-jocher/)
+* [@onuralpszr](https://github.com/onuralpszr/)
 * [@pderrenger](https://github.com/pderrenger/)
 
