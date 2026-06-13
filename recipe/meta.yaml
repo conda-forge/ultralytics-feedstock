@@ -38,6 +38,7 @@ requirements:
     - seaborn >=0.11.0
     - psutil
     - py-cpuinfo
+    - nvidia-ml-py >=12.0.0
 
 test:
   source_files:
