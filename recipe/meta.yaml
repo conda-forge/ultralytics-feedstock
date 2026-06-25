@@ -15,7 +15,7 @@ build:
     - ultralytics = ultralytics.cfg:entrypoint
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -31,7 +31,7 @@ requirements:
     - pillow >=7.1.2
     - pyyaml >=5.3.1
     - requests >=2.23.0
-    - scipy >=1.4.1
+    # - scipy >=1.4.1  # optional, speeds up linear_sum_assignment when installed
     # - pytorch >=1.7.0
     # - torchvision >=0.8.1
     - polars
