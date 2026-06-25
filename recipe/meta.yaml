@@ -1,5 +1,5 @@
 {% set name = "ultralytics" %}
-{% set version = "8.4.77" %}
+{% set version = "8.4.78" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ultralytics-{{ version }}.tar.gz
-  sha256: 61e64e9bb689113c5bf2e1b846ae3f8e74c3081410d3609855967d902900003a
+  sha256: 3afdab061cb4d72b8aa664b0a800481a4ffa2c1a13edf5e5c120eca3d9472d6c
 
 build:
   entry_points:
@@ -31,7 +31,7 @@ requirements:
     - pillow >=7.1.2
     - pyyaml >=5.3.1
     - requests >=2.23.0
-    - scipy >=1.4.1
+    # - scipy >=1.4.1  # optional, speeds up linear_sum_assignment when installed
     # - pytorch >=1.7.0
     # - torchvision >=0.8.1
     - polars
