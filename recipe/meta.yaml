@@ -35,10 +35,9 @@ requirements:
     # - pytorch >=1.7.0
     # - torchvision >=0.8.1
     - polars
-    - seaborn >=0.11.0
     - psutil
-    - py-cpuinfo
     - nvidia-ml-py >=12.0.0
+    - ultralytics-thop >=2.0.18
 
 test:
   source_files:
@@ -47,8 +46,6 @@ test:
     - ultralytics
   commands:
     # coremltools>=7.0 requires pip install as latest conda coremltools==4.1
-    # ultralytics-thop requires pip install as not available in conda
-    - pip install ultralytics-thop>=2.0.0
     - pip check
     - yolo checks
     - ultralytics version
