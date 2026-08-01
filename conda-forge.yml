@@ -5,5 +5,5 @@ conda_build:
   error_overlinking: true
 conda_forge_output_validation: true
 bot:
-  automerge: false
+  automerge: true
   run_deps_from_wheel: true
