@@ -168,4 +168,5 @@ Feedstock Maintainers
 * [@glenn-jocher](https://github.com/glenn-jocher/)
 * [@onuralpszr](https://github.com/onuralpszr/)
 * [@pderrenger](https://github.com/pderrenger/)
+* [@raimbekovm](https://github.com/raimbekovm/)
 
