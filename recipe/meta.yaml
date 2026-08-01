@@ -37,7 +37,7 @@ requirements:
     - polars
     - psutil
     - nvidia-ml-py >=12.0.0
-    - ultralytics-thop >=2.0.18
+    - ultralytics-thop >=2.1.6
 
 test:
   source_files:
