@@ -1,5 +1,5 @@
 {% set name = "ultralytics" %}
-{% set version = "8.4.137" %}
+{% set version = "8.4.138" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/ultralytics-{{ version }}.tar.gz
-  sha256: 6928c498878f6288e750d0e0acde32d46bad5afdea924391a995d41e296eb150
+  sha256: 4583b4cf3c2eeb2d83b54c206cb1ebaf9d8454e8e51a7d40ac7d8fa61e249d92
 
 build:
   entry_points:
@@ -46,6 +46,7 @@ test:
     - ultralytics
   commands:
     # coremltools>=7.0 requires pip install as latest conda coremltools==4.1
+    - pip install ultralytics-platform
     - pip check
     - yolo checks
     - ultralytics version
