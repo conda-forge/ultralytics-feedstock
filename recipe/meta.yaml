@@ -14,7 +14,7 @@ build:
     - yolo = ultralytics.cfg:entrypoint
     - ultralytics = ultralytics.cfg:entrypoint
   noarch: python
-  script: {{ PYTHON }} -m pip install . ultralytics-platform -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -46,6 +46,7 @@ test:
     - ultralytics
   commands:
     # coremltools>=7.0 requires pip install as latest conda coremltools==4.1
+    - pip install ultralytics-platform
     - pip check
     - yolo checks
     - ultralytics version
