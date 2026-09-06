@@ -25,9 +25,11 @@ requirements:
     - wheel
   run:
     - python >={{ python_min }}
+    - cloudpickle >=3.1.1
+    - filelock >=3.16.1
     - matplotlib-base >=3.3.0
     - numpy >=1.22.2
-    - opencv >=4.6.0
+    - opencv >=4.7.0
     - pillow >=7.1.2
     - pyyaml >=5.3.1
     - requests >=2.23.0
